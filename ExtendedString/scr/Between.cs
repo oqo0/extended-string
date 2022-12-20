@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace ExtendedString;
 
 public static partial class ExtendedString
@@ -9,8 +11,8 @@ public static partial class ExtendedString
     
     public static string Between(this string str, char openCharacter, char closeCharacter)
     {
-        if (str == null)
-            throw new ArgumentNullException(nameof(str));
+        if (String.IsNullOrEmpty(str))
+            return null;
 
         int openCharacterEntryIndex = str.IndexOf(openCharacter);
         if (openCharacterEntryIndex == -1 || openCharacterEntryIndex == str.Length - 1)
@@ -39,8 +41,8 @@ public static partial class ExtendedString
     
     public static string Between(this string str, string openString, string closeString, StringComparison stringComparison)
     {
-        if (str == null)
-            throw new ArgumentNullException(nameof(str));
+        if (String.IsNullOrEmpty(str))
+            return null;
         if (openString == null)
             throw new ArgumentNullException(nameof(openString));
         if (closeString == null)
