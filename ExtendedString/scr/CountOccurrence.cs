@@ -4,7 +4,7 @@ public static partial class ExtendedString
 {
     public static int CountOccurrence(this string str, string line)
     {
-        return CountOccurrence(str, line);
+        return CountOccurrence(str, line, StringComparison.Ordinal);
     }
     
     public static int CountOccurrence(this string str, string line, StringComparison stringComparison)
