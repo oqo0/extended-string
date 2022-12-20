@@ -1,5 +1,3 @@
-using System.Data;
-
 namespace ExtendedString;
 
 public static partial class ExtendedString
@@ -48,21 +46,21 @@ public static partial class ExtendedString
         if (closeString == null)
             throw new ArgumentNullException(nameof(closeString));
 
-        int openCharacterEntryIndex = str.IndexOf(openString, stringComparison);
-        if (openCharacterEntryIndex == -1 || openCharacterEntryIndex == str.Length - 1)
+        int openStringEntryIndex = str.IndexOf(openString, stringComparison);
+        if (openStringEntryIndex == -1 || openStringEntryIndex == str.Length - 1)
         {
             return null;
         }
 
-        int closeCharacterEntryIndex = str.IndexOf(closeString, openCharacterEntryIndex + 1, stringComparison);
-        if (closeCharacterEntryIndex == -1)
+        int closeStringEntryIndex = str.IndexOf(closeString, openStringEntryIndex + 1, stringComparison);
+        if (closeStringEntryIndex == -1)
         {
             return null;
         }
     
         return str.Substring(
-            openCharacterEntryIndex + openString.Length,
-            closeCharacterEntryIndex - (openCharacterEntryIndex + openString.Length)
+            openStringEntryIndex + openString.Length,
+            closeStringEntryIndex - (openStringEntryIndex + openString.Length)
             );
     }
 }
