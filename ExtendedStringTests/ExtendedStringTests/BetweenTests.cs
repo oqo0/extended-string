@@ -10,7 +10,7 @@ public partial class ExtendedString
     [Test]
     [TestCase("#1#", '#', '#', "1")]
     [TestCase("", '3', '#', null)]
-    public void StringBetweenChars(string testString, char openChar, char closeChar, string expectedResult)
+    public void BetweenChars(string testString, char openChar, char closeChar, string expectedResult)
     {
         string actualResult = testString.Between(openChar, closeChar);
         
@@ -20,7 +20,7 @@ public partial class ExtendedString
     [Test]
     [TestCase("#1@", "#", "@", "1")]
     [TestCase("", "", "", null)]
-    public void StringBetweenStrings(string testString, string openStr, string closeStr, string expectedResult)
+    public void BetweenStrings(string testString, string openStr, string closeStr, string expectedResult)
     {
         string actualResult = testString.Between(openStr, closeStr, StringComparison.Ordinal);
         
