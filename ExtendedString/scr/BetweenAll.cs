@@ -1,6 +1,89 @@
 namespace ExtendedString;
 
-public class BetweenAll
+public static partial class ExtendedString
 {
+    public static IEnumerable<String> BetweenAll(this string str, char character)
+    {
+        return BetweenAll(str, character, character);
+    }
     
+    public static IEnumerable<String> BetweenAll(this string str, char openCharacter, char closeCharacter)
+    {
+        if (String.IsNullOrEmpty(str))
+            return null;
+
+        int openCharacterEntryIndex = str.IndexOf(openCharacter);
+        if (openCharacterEntryIndex == -1 || openCharacterEntryIndex == str.Length - 1)
+        {
+            return null;
+        }
+
+        int closeCharacterEntryIndex = str.IndexOf(closeCharacter, openCharacterEntryIndex + 1);
+        if (closeCharacterEntryIndex == -1)
+        {
+            return null;
+        }
+
+        var result = new List<String>();
+        
+        while (openCharacterEntryIndex != -1 && closeCharacterEntryIndex != -1)
+        {
+            result.Add(str.Substring(
+                openCharacterEntryIndex + 1,
+                closeCharacterEntryIndex - openCharacterEntryIndex - 1
+            ));
+            
+            openCharacterEntryIndex = str.IndexOf(openCharacter, openCharacterEntryIndex + 1);
+            closeCharacterEntryIndex = str.IndexOf(closeCharacter, openCharacterEntryIndex + 1);
+        }
+
+        return result;
+    }
+
+    public static IEnumerable<String> BetweenAll(this string str, string openString)
+    {
+        return BetweenAll(str, openString, openString, StringComparison.Ordinal);
+    }   
+    
+    public static IEnumerable<String> BetweenAll(this string str, string openString, StringComparison stringComparison)
+    {
+        return BetweenAll(str, openString, openString, stringComparison);
+    }
+    
+    public static IEnumerable<String> BetweenAll(this string str, string openString, string closeString, StringComparison stringComparison)
+    {
+        if (String.IsNullOrEmpty(str))
+            return null;
+        if (openString == null)
+            throw new ArgumentNullException(nameof(openString));
+        if (closeString == null)
+            throw new ArgumentNullException(nameof(closeString));
+
+        int openStringEntryIndex = str.IndexOf(openString, stringComparison);
+        if (openStringEntryIndex == -1 || openStringEntryIndex == str.Length - 1)
+        {
+            return null;
+        }
+
+        int closeStringEntryIndex = str.IndexOf(closeString, openStringEntryIndex + 1, stringComparison);
+        if (closeStringEntryIndex == -1)
+        {
+            return null;
+        }
+
+        var result = new List<String>();
+        
+        while (openStringEntryIndex != -1 && closeStringEntryIndex != -1)
+        {
+            result.Add(str.Substring(
+                openStringEntryIndex + 1,
+                closeStringEntryIndex - openStringEntryIndex - 1
+            ));
+            
+            openStringEntryIndex = str.IndexOf(openString, openStringEntryIndex + 1, stringComparison);
+            closeStringEntryIndex = str.IndexOf(closeString, openStringEntryIndex + 1, stringComparison);
+        }
+
+        return result;
+    }
 }
