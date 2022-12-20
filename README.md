@@ -1,8 +1,6 @@
 - Between
 - Between All
 - Count Substring
-- Is Empty
-- Is Whitespace
 - Is Empty or whitespace
 - Left Of Character
 - Right OF Character
