@@ -26,7 +26,7 @@ public static partial class ExtendedString
             occuranceCount++;
         }
         
-        return str.Substring(0, characterIndex - 1);
+        return str.Substring(0, characterIndex);
     }
 
     public static string LeftOf(this string str, string value)
@@ -58,6 +58,6 @@ public static partial class ExtendedString
             occurrenceCount++;
         }
         
-        return str.Substring(0, characterIndex - 1);
+        return str.Substring(0, characterIndex);
     }
 }
