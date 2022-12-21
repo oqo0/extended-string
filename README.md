@@ -2,8 +2,8 @@
 + Between All
 + Count Substring
 + Is Empty or whitespace
-- Left Of Character
-- Right OF Character
++ Left Of Character
++ Right OF Character
 - Replace One occurrcy
 - Reverse String
 - Get String Size in bytes
