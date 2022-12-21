@@ -60,6 +60,9 @@ public static partial class ExtendedString
             occuranceCount++;
         }
         
-        return str.Substring(characterIndex + 1, str.Length - characterIndex - 1);
+        return str.Substring(
+            characterIndex + value.Length,
+            str.Length - characterIndex  - value.Length
+            );
     }
 }
