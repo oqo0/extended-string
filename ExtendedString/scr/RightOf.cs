@@ -15,7 +15,7 @@ public static partial class ExtendedString
             return null;
         
         int characterIndex = str.IndexOf(character);
-        if (characterIndex == -1 || characterIndex == 0)
+        if (characterIndex == -1 || characterIndex == str.Length - 1)
         {
             return null;
         }
@@ -47,7 +47,7 @@ public static partial class ExtendedString
             return null;
         
         int characterIndex = str.IndexOf(value, stringComparison);
-        if (characterIndex == -1 || characterIndex == 0)
+        if (characterIndex == -1 || characterIndex == str.Length - 1)
         {
             return null;
         }
