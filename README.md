@@ -20,15 +20,15 @@
 ---
 
 ## List of methods
-- `Between()` - Returns a string between external strings or chars.
-- `BetweenAll()` - Returns all strings between external strings or chars.
-- `Center()` - Centers a string in a field of given width.
-- `CountOccurence()` - Counts of a specified string in string.
-- `IsEmptyOrWhitespace()` - Determines if string is empty or only consists of whitespaces.
-- `LeftOf()` - Extracts a string left of a specified char \ string.
-- `RightOf()` - Extracts a string right of a specified char \ string.
-- `ReplaceAmount()` - Replaces a specified amount of string occurrence.
-- `Reverse()` - Reverses a string.
+- `Between` - Returns a string between external strings or chars.
+- `BetweenAll` - Returns all strings between external strings or chars.
+- `Center` - Centers a string in a field of given width.
+- `CountOccurence` - Counts of a specified string in string.
+- `IsEmptyOrWhitespace` - Determines if string is empty or only consists of whitespaces.
+- `LeftOf` - Extracts a string left of a specified char \ string.
+- `RightOf` - Extracts a string right of a specified char \ string.
+- `ReplaceAmount` - Replaces a specified amount of string occurrence.
+- `Reverse` - Reverses a string.
 
 ## Examples
 You can find a variety of minimalistic examples in [tests](ExtendedStringTests/ExtendedStringTests).
