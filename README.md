@@ -37,7 +37,7 @@ You can find a variety of minimalistic examples in [tests](ExtendedStringTests/E
 ```c#
 str = "#1$ #2$"
 Console.WriteLine(
-    str.BetweenAll('#', '$')
+    str.Between('#', '$')
 );
 ```
 Result: `"1"`
