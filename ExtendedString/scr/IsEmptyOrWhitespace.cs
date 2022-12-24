@@ -2,6 +2,14 @@ namespace ExtendedString;
 
 public static partial class ExtendedString
 {
+    /// <summary>
+    /// Checks if string is empty or consists only of whitespaces.
+    /// </summary>
+    /// <param name="str">Input string.</param>
+    /// <returns>
+    /// Returns true if string is empty or consists only of whitespaces.
+    /// False in another case.
+    /// </returns>
     public static bool IsEmptyOrWhitespace(this string str)
     {
         if (String.IsNullOrWhiteSpace(str))
