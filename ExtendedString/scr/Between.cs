@@ -83,7 +83,7 @@ public static partial class ExtendedString
     /// <param name="closeString">String to use to close substring scope.</param>
     /// <param name="stringComparison">StringComparison to use to search for open string occurrence.</param>
     /// <returns>
-    /// A substring starting from the first occurrence of the openString to the second occurrence of the openString.
+    /// A substring starting from the openString to the closeString.
     /// Returns null if string is null or empty.
     /// </returns>
     public static string Between(this string str, string openString, string closeString, StringComparison stringComparison)
