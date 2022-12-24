@@ -20,7 +20,7 @@ public static partial class ExtendedString
     /// </summary>
     /// <param name="str">Input string.</param>
     /// <param name="character">Char to use to end substring.</param>
-    /// <param name="occurrenceIndex">Index of character occurrence which well be used as the end of the substring.</param>
+    /// <param name="occurrenceIndex">Index of character occurrence which will be used as the end of the substring.</param>
     /// <returns>
     /// Returns a string to the left of a specified character.
     /// </returns>
@@ -64,7 +64,7 @@ public static partial class ExtendedString
     /// </summary>
     /// <param name="str">Input string.</param>
     /// <param name="value">String to use to end substring.</param>
-    /// <param name="occurrenceIndex">Index of stringoccurrence which well be used as the end of the substring.</param>
+    /// <param name="occurrenceIndex">Index of stringoccurrence which will be used as the end of the substring.</param>
     /// <returns>
     /// Returns a string to the left of a specified string.
     /// </returns>
@@ -78,7 +78,7 @@ public static partial class ExtendedString
     /// </summary>
     /// <param name="str">Input string.</param>
     /// <param name="value">String to use to end substring.</param>
-    /// <param name="occurrenceIndex">Index of string occurrence which well be used as the end of the substring.</param>
+    /// <param name="occurrenceIndex">Index of string occurrence which will be used as the end of the substring.</param>
     /// <param name="stringComparison">StringComparison to use to search for value occurrence.</param>
     /// <returns>
     /// Returns a string to the left of a specified string.
