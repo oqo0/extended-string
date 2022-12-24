@@ -18,12 +18,12 @@ public static partial class ExtendedString
             return null;
         }
 
-        int occuranceCount = 0;
+        int occurrenceCount = 0;
         
-        while (occuranceCount < occurrenceIndex && characterIndex != -1)
+        while (occurrenceCount < occurrenceIndex && characterIndex != -1)
         {
             characterIndex = str.IndexOf(character, characterIndex + 1);
-            occuranceCount++;
+            occurrenceCount++;
         }
         
         return str.Substring(0, characterIndex);
