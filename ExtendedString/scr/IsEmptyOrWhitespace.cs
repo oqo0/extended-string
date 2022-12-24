@@ -4,7 +4,7 @@ public static partial class ExtendedString
 {
     public static bool IsEmptyOrWhitespace(this string str)
     {
-        if (str == null)
+        if (String.IsNullOrWhiteSpace(str))
             return false;
         
         if (str.Length == 0 || IsEveryCharWhitespace(str))
